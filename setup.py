@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="routex",
+    name="modelrouter",
     version="0.1.1",
     author="EXO",
     description="Class-based routing with dynamic Pydantic model generation for FastAPI",
