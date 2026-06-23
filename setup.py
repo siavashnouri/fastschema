@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setup(
     name="fastschema",
-    version="0.1.4",
+    version="0.1.5",
     author="EXO",
     description="Class-based routing with dynamic Pydantic model generation for FastAPI",
     long_description=long_description,
@@ -27,4 +27,7 @@ setup(
         "Programming Language :: Python :: 3.12",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
+    project_urls = {
+        "Homepage":  "https://github.com/siavashnouri/fastschema",
+    }
 )
