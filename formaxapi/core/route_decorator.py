@@ -46,7 +46,10 @@ def route_factory(*route_classes: type) -> APIRouter:
         cls_prefix = ""
         if cls._prefix:
             cls_prefix=cls._prefix if cls._prefix.startswith("/") else "/" + cls._prefix
-        default_tags = [getattr(cls, '_tags', None) or cls.__name__]
+        
+        default_tags=[]
+        if getattr(cls, '_tags', None):
+            default_tags = [getattr(cls, '_tags', None)]
 
         for attr_name in dir(cls):
             attr = getattr(cls, attr_name, None)
